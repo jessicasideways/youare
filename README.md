@@ -11,8 +11,9 @@ Due to the fact that the original YouAre Theme was issued under the GPU license,
 ### When will the You Are Theme be publicly available for download?
 Sometime in mid-July 2013.
 
-YouAre Theme Installation Instructions:
----------------------------------------
+YouAre Theme Installation Instructions
+--------------------------------------
+Note: These instructions were not written by me, but by the creator of the original theme. Please understand that as the theme is improved, these will be much simpler. Thanks for your understanding. ;)
 
 Plugins required and recommended are in the zip files that you downloaded. Upload and activate plugins, before activating the theme itself. No template editing required. Just plugin activation :)
 
