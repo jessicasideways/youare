@@ -1,11 +1,11 @@
 /*
-Theme Name:	YouAre
-Theme URI: 	http://wptheme.youare.com/
-Description: Promote your real-life identity and your professional profile. A complete, elegant and minimalist widget-ready theme for Wordpress 2.8+. Powerful theme options, grid-based layout, microformats, easy color customization, SEO optimized...
-Version: 	0.3
-Author:		YouAre
-Author URI:	http://youare.com
-Tags: theme-options, fixed-width, two-columns, white, brown, green, right-sidebar, threaded-comments, microformats, translation-ready
+Theme Name:		The You Are Theme
+Theme URI:		http://jessicasideways.github.io/youare/
+Description:	Promote your real-life identity and your professional profile. A complete, elegant and minimalist widget-ready theme for Wordpress 2.8+. Powerful theme options, grid-based layout, microformats, easy color customization, SEO optimized...
+Version: 		0.3.1
+Author:			Jessica Sideways
+Author URI:		http://jessicasideways.com
+Tags: 			theme-options, fixed-width, two-columns, white, brown, green, right-sidebar, threaded-comments, microformats, translation-ready
 */
 
 
@@ -17,59 +17,98 @@ Tags: theme-options, fixed-width, two-columns, white, brown, green, right-sideba
 /*Body & Links 
 ------------------------------------------------------------ */
 
-body {	
-	
-font: 300 62.5% Helvetica Neue, Helvetica, Arial, Sans-serif; 
-/* Consistent Base Font Size: By setting the body font-size to 62.5%, that will set your font size to 10 pixels. That way, 1em is equal to 10 pixels. */
-line-height: 1.8em
-}
-p {margin-bottom: 1em;
-}
-.content-background {font-size: 1.4em; line-height: 1.8em
+body {
+	font: 300 62.5% Helvetica Neue, Helvetica, Arial, Sans-serif; 
+	/* Consistent Base Font Size: By setting the body font-size to 62.5%, that will set your font size to 10 pixels. That way, 1em is equal to 10 pixels. */
+	line-height: 1.8em
 }
 
-.bold, #content p a, .bg_side a, .subscribe, #content li a {font-weight: bold }
-
-.pleft { float: left; padding-right: 5px; margin-bottom: 0
+p {
+	margin-bottom: 1em;
+}
+.content-background {
+	font-size: 1.4em;
+	line-height: 1.8em;
 }
 
-.pright {float: right; }
-
-.pcenter {text-align: center }
-
-.block_top {margin-top: 35px }
-
-.block_bottom {margin-bottom: 35px }
-
-.nomargin, #sidebar h2 {margin: 0 }
-
-p.nobackground, .nobackground {background-image: none }
-
-.big {font-size: 120% }
-
-.small {font-size: 90% }
-
-a { text-decoration: underline;
- }
-
-a img { border: none
+.bold, #content p a, .bg_side a, .subscribe, #content li a {
+	font-weight: bold;
 }
-a.rss {	padding-left: 17px; background: url(images/icons/rss.png) no-repeat; }
-a.email {background: url(images/icons/mini-mail.png) no-repeat 0 7px; padding-left: 15px; margin-left: 10px }
 
-a.print, a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'], a[href$='.pdf'] { padding-left: 20px }
+.pleft {
+	float: left;
+	padding-right: 5px;
+	margin-bottom: 0;
+}
+
+.pright {
+	float: right;
+}
+
+.pcenter {
+	text-align: center;
+}
+
+.block_top {
+	margin-top: 35px;
+}
+
+.block_bottom {
+	margin-bottom: 35px;
+}
+
+.nomargin, #sidebar h2 {
+	margin: 0;
+}
+
+p.nobackground, .nobackground {
+	background-image: none;
+}
+
+.big {
+	font-size: 120%;
+}
+
+.small {
+	font-size: 90%;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a img { 
+	border: none;
+}
+a.rss {
+	padding-left: 17px;
+	background: url(images/icons/rss.png) no-repeat;
+}
+a.email {
+	background: url(images/icons/mini-mail.png) no-repeat 0 7px;
+	padding-left: 15px;
+	margin-left: 10px;
+}
+
+a.print, a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'], a[href$='.pdf'] {
+	padding-left: 20px;
+}
 a.print {
-
-background:url(images/icons/print.png) no-repeat 5px;
+	background:url(images/icons/print.png) no-repeat 5px;
 }
-a[href$='.pdf'] { background: url(images/icons/pdf.png) no-repeat;
+a[href$='.pdf'] {
+	background: url(images/icons/pdf.png) no-repeat;
 }
 a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'] {
-background: url(images/icons/zip.gif) no-repeat;
+	background: url(images/icons/zip.gif) no-repeat;
 }
-#header a, .title a, #content #smart-archives-block li strong a {text-decoration: none; }
+#header a, .title a, #content #smart-archives-block li strong a {
+	text-decoration: none;
+}
 
-#content a.email { margin-left: 40px}
+#content a.email {
+	margin-left: 40px;
+}
 
 
 /*Header
