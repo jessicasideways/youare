@@ -1,15 +1,18 @@
 The You Are Theme
 =================
-The You Are Theme is a very personal, minimalistic theme for WordPress. It is based off of the YouAre theme created by the former social network, YouAre.com.
+The You Are Theme is a very personal, minimalistic theme for WordPress. It is currently compatible with WordPress 2.8, but efforts are underway to modernise the theme. It is based off of the YouAre theme created by the former social network, YouAre.com.
 
 
 Frequently Asked Questions
 --------------------------
 ### What license will the You Are Theme be issued under?
-Due to the fact that the original YouAre Theme was issued under the GPU license, I do not think that the You Are Theme can break from that tradition. Before the first stable release, though, I will try to figure out if this is really the case.
+Due to the fact that the original YouAre Theme was issued under the GNU license, I do not think that the You Are Theme can break from that tradition. Before the first stable release, though, I will try to figure out if this is really the case.
 
 ### When will the You Are Theme be publicly available for download?
-Sometime in mid-July 2013.
+It is currently available for download through Github. It will be publicised on WordPress.org as the theme starts getting closer and closer to version 1.0.
+
+### Will the classic version of the YouAre Theme be available/updated?
+The YouAre Theme will be updated to HTML5 and will be upgraded to WordPress 3.7.1, but at this time, there are no plans to continue the YouAre Theme, instead focusing on the You Are Theme. The YouAre theme and it's revisions/updates will continue to historically be available through Github as they are committed.
 
 YouAre Theme Installation Instructions
 --------------------------------------
