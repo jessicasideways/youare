@@ -11,8 +11,11 @@ Due to the fact that the original YouAre Theme was issued under the GNU license,
 ### When will the You Are Theme be publicly available for download?
 It is currently available for download through Github. It will be publicised on WordPress.org as the theme starts getting closer and closer to version 1.0.
 
-### Will the classic version of the YouAre Theme be available/updated?
+### Will the classic version of the YouAre Theme be available or updated?
 The YouAre Theme will be updated to HTML5 and will be upgraded to WordPress 3.7.1, but at this time, there are no plans to continue the YouAre Theme, instead focusing on the You Are Theme. The YouAre theme and it's revisions/updates will continue to historically be available through Github as they are committed.
+
+### Will there be a live demo site?
+As soon as the theme gets closer to being 3.7.1 compatible, yes.
 
 YouAre Theme Installation Instructions
 --------------------------------------
