@@ -11,14 +11,14 @@ Tags: 			theme-options, fixed-width, two-columns, white, brown, green, right-sid
 
 /* Import Stylesheets
 -----------------------------------------------------------*/
-@import url("css/layout_grid24.css");
-
+@import url("css/bootstrap.min.css");
+@import url("css/bootstrap-theme.min.css");
 
 /*Body & Links 
 ------------------------------------------------------------ */
 
 body {
-	font: 300 62.5% Helvetica Neue, Helvetica, Arial, Sans-serif; 
+	font: 300 62.5%; 
 	/* Consistent Base Font Size: By setting the body font-size to 62.5%, that will set your font size to 10 pixels. That way, 1em is equal to 10 pixels. */
 	line-height: 1.8em
 }
@@ -26,6 +26,7 @@ body {
 p {
 	margin-bottom: 1em;
 }
+
 .content-background {
 	font-size: 1.4em;
 	line-height: 1.8em;

@@ -6,18 +6,17 @@ require_once (FUNCTIONS . '/youare-admin.php');
 
 // Meta description and keywords
 function csv_tags() {
-  $list = get_the_tags();
-  if ($list) {
-    foreach($list as $tag) {
-      $csv_tags[] = $tag->name;
-    }
-  }
-  foreach((get_the_category()) as $tag) {
+	$list = get_the_tags();
+	if ($list) {
+		foreach($list as $tag) {
+			$csv_tags[] = $tag->name;
+		}
+	}
+	foreach((get_the_category()) as $tag) {
 		$csv_tags[] = $tag->cat_name;
 	}
 	echo '<meta name="keywords" content="'.implode(',',$csv_tags).'" />';
 }
-
 
 // Widgets Sidebar
 if ( function_exists('register_sidebar_widget') )
