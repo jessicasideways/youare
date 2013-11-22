@@ -3,18 +3,20 @@
 Template Name: Archives
 */
 ?>
-<?php get_header(); ?>	        
-<div class="container splash">
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class="bigpage title"><?php _e('Archives', 'youare'); ?></h1>
-			<?php
-				$numposts = (int) $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts WHERE post_type = 'post' AND post_status = 'publish'"); 
-				$numcomms = (int) $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments WHERE comment_approved = '1'"); 
-				$numcats = wp_count_terms('category'); 
-				$numtags = wp_count_terms('post_tag'); 
-			?> 
-			<p><?php echo sprintf(__('There are currently %s posts, contained within %s categories, using <a href="/tags">%s tags.</a>', 'youare'), $numposts, $numcats, $numtags); ?></p>
+<?php get_header(); ?>
+<div class="splash">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="bigpage title"><?php _e('Archives', 'youare'); ?></h1>
+				<?php
+					$numposts = (int) $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts WHERE post_type = 'post' AND post_status = 'publish'"); 
+					$numcomms = (int) $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments WHERE comment_approved = '1'"); 
+					$numcats = wp_count_terms('category'); 
+					$numtags = wp_count_terms('post_tag'); 
+				?> 
+				<p><?php echo sprintf(__('There are currently %s posts, contained within %s categories, using <a href="/tags">%s tags.</a>', 'youare'), $numposts, $numcats, $numtags); ?></p>
+			</div>
 		</div>
 	</div>
 </div> <!--end splash-->  

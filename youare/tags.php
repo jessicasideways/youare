@@ -4,13 +4,15 @@ Template Name: Tags
 */
 get_header();
 ?>
-<div class="container splash">
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class="title"><?php _e('Tags Archive', 'youare'); ?></h1>
-			<p><?php _e('Tag Cloud', 'youare'); ?></p>
-		</div> <!--end grid_24-->
-	</div> <!--end container_24-->
+<div class="splash">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="title"><?php _e('Tags Archive', 'youare'); ?></h1>
+				<p><?php _e('Tag Cloud', 'youare'); ?></p>
+			</div>
+		</div> 
+	</div> 
 </div> <!--end splash-->  
 <div class="container">
 	<div class="row content-background">

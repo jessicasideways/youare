@@ -2,9 +2,10 @@
 <?php 
   if (have_posts()) {
 ?>
-<div class="container splash">
-	<div class="row">
-		<div class="col-md-12">
+<div class="splash">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
 <?php
 			if (!get_option('Y_twitter_toggle_updates')) {
 ?>
@@ -18,6 +19,7 @@
 				}
 			}
 ?>
+			</div>
 		</div>
 	</div>
 </div> <!--end splash-->  

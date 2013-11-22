@@ -66,7 +66,7 @@ a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'] {
 a.print, a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'], a[href$='.pdf'] {
   padding-left: 20px; }
 
-#header a, .title a, #content #smart-archives-block li strong a {
+header a, .title a, #content #smart-archives-block li strong a {
   text-decoration: none; }
 
 #content a.email {
@@ -75,12 +75,9 @@ a.print, a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'], a[href$='.pdf'] {
 #content img {
   max-width: 100%; }
 
-#header {
-  width: 100%;
-  height: 100px; }
-  #header .vcard img {
-    position: absolute;
-    top: 18px; }
+header .vcard img {
+  position: absolute;
+  top: 18px; }
 
 h1#logo a, div#logo a {
   float: left;
@@ -104,7 +101,8 @@ h1#logo a, div#logo a {
   line-height: 25px; }
   .nav li {
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    display: block; }
     .nav li.home {
       border: none; }
     .nav li a {
@@ -126,7 +124,7 @@ h1#logo a, div#logo a {
     padding: 5px 10px; }
 
 .splash {
-  width: 96%;
+  width: 100%;
   padding: 2%;
   font-size: 1.3em;
   margin-bottom: 35px; }
@@ -637,7 +635,7 @@ img.center, img.aligncenter {
 #promo_down.splash h2 {
   width: 650px; }
 
-#footer {
+footer {
   position: relative;
   clear: both;
   overflow: hidden;
