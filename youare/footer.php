@@ -18,7 +18,7 @@ $footer_content = get_option('Y_footer_content');
 					?>
 					<a href=""><img src="<?php bloginfo('template_url'); ?>/images/logo_promo_footer.png" alt="<?php _e('Logo', 'youare'); ?>" /></a>
 					<h2 class="title"><?php _e('Your Company tag line or Featured work', 'youare'); ?></h2>
-					<p><?php _e('Company services. Go to YouAre Options menu (the Footer Promo section) in WP Dashboard. <a href="http://wptheme.youare.com/demo/2009/08/19/how-to-customize-footer/">View examples</a>.', 'youare'); ?></p>
+					<p><?php _e('Company services. Go to You Are Options menu (the Footer Promo section) in WP Dashboard. <a href="http://wptheme.youare.com/demo/2009/08/19/how-to-customize-footer/">View examples</a>.', 'youare'); ?></p>
 					<?php 
 						}
 					?>
