@@ -42,13 +42,12 @@ $footer_content = get_option('Y_footer_content');
 			</div><!--end footer-->
 		</div>
 	</footer>
-<?php 
-  wp_footer();
-
+<?php
 	$tmp_stats_code = get_option('Y_stats_code');
 	if($tmp_stats_code != ''){
 		echo stripslashes($tmp_stats_code);
 	}
+	wp_footer();
 ?>
 </body>
 </html>

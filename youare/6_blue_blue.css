@@ -159,26 +159,9 @@ textarea:focus { background: #fff; }
 
 /*System
 ---------------------------------------*/
-
 .alert, .info, .success {
-
-padding: 10px 30px;
-overflow: hidden
-
-}
-.alert {
-border:1px solid #fe8610;
-background: #f8dc87 url(images/icons/alert.png) no-repeat 10px;
-
-}
-.success { 
-border: 1px solid #96b34f; 
-background: #e6f0c3 url(images/icons/check.png) no-repeat 10px;
-}
-
-.info { 
-border: 1px solid #c3dfdf;
-background: #e0eaef url(images/icons/info.png) no-repeat 10px;
+	padding: 10px 30px;
+	overflow: hidden
 }
 
 /*Sidebar

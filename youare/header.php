@@ -3,33 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		
-		<?php if( is_front_page() ) : ?>
-			<title><?php bloginfo('name'); ?> | <?php bloginfo('description');?></title>
-		<?php elseif( is_404() ) : ?>
-			<title><?php _e('Page not found', 'youare'); ?> | <?php bloginfo('name'); ?></title>
-		<?php elseif( is_search() ) : ?>
-			<title><?php  print __('Search Results for ') . wp_specialchars($s); ?> | <?php bloginfo('name'); ?></title>
-		<?php else : ?>
-			<title><?php wp_title($sep = ''); ?> | <?php bloginfo('name');?></title>
-		<?php endif; ?>
+		<title><?php
+			wp_title( '|', true, 'right' );
+		?></title>
 
 		<!-- Basic Meta Data -->
 		<?php csv_tags(); ?>
-
-		<!--Stylesheets-->
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" type="text/css" rel="stylesheet" />
-		<?php $y_alt_stylesheet = get_option('Y_alt_stylesheet'); if ( $y_alt_stylesheet && !($y_alt_stylesheet == 'Select a stylesheet:') ) {
-				echo '<link rel="stylesheet" href="' . get_bloginfo('template_directory') . '/' . $y_alt_stylesheet . '" type="text/css" media="screen" />';
-			} else {
-		?>
-      	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/1_default_colors.css" type="text/css" media="screen" />
-  		<?php
-			}
-		?>
-		<link href="<?php bloginfo('template_url'); ?>/css/print.css" type="text/css" media="print" rel="stylesheet"  />
-		
+	
 		<!-- Feeds -->
 		<?php $rss_url = get_option('Y_feedburner_username');
 			if ($rss_url != "") { ?>
@@ -41,12 +21,11 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<!--WP Hook-->
         <?php
-			if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 			wp_head();
 		?>
 	</head>
 	<body<?php if (is_single() || is_archive()) echo(' id="archives_page"');?>>
-		<header>
+		<header id="header">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-xs-12 vcard">
