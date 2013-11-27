@@ -23,6 +23,36 @@ function theme_css_js() {
 
 add_action( 'wp_enqueue_scripts', 'theme_css_js');
 
+// Posts function
+function youare_archive_x_posts() {
+	$count = 0;
+	if (have_posts()) : while(have_posts()): the_post();
+		$count++;
+	endwhile; endif;
+	echo "<p>";
+	if ($count == '1') { echo "1 post"; } else { echo $count . " posts"; }
+	echo "</p>";
+}
+
+// Date function
+function youare_posted_date() {
+	printf( __( '<time class="entry-date" datetime="%1$s">%2$s</time>', 'youare' ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+}
+function youare_posted_on() {
+	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'youare' ),
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'twentyeleven' ), get_the_author() ) ),
+		get_the_author()
+	);
+}
+
 // Meta description and keywords
 function csv_tags() {
 	$list = get_the_tags();
@@ -308,7 +338,6 @@ add_action('rss2_head', add_feed_logo );
 
 		return $avatar_defaults;
 	}
-
 	add_filter( 'avatar_defaults', 'y_addgravatar' );
 }
 

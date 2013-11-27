@@ -3,6 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<div class="date"> <strong><?php the_time('d') ?></strong> <span><?php the_time('M') ?></span> <em><?php the_time('Y') ?></em> </div>
 				<h1 class="title"><?php the_title(); ?></h1>
 				<p><span><?php
 					$prev_post = get_previous_post();
@@ -16,14 +17,14 @@
 						$next_title = strip_tags(str_replace('"', '', $next_post->post_title));
 						echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="next">'.__('Next &raquo;', 'youare').'</a>' . "\n";
 					}
-				?></span> <?php edit_post_link(__('Edit This', 'youare'),'<strong>','</strong>'); ?> <strong><?php the_time('F jS, Y') ?></strong>, <a href="<?php echo get_permalink() ?>" rel="bookmark" title="Permanent Link"><?php the_time('G:i') ?>H</a> &middot; <?php _e('Topics', 'youare'); ?>: <?php the_category(', ') ?> &middot; <a href="#" onclick="javascript:print();" rel="nofollow" class="print" title="<?php _e('Print', 'youare'); ?>"><?php _e('Print', 'youare'); ?></a> </p>
+				?></span> <?php edit_post_link(__('Edit This', 'youare'),'<strong>','</strong>'); ?> Posted on <?php youare_posted_date(); ?> at <a href="<?php echo get_permalink(); ?>" rel="bookmark" title="Permanent Link"><?php the_time('G:i'); ?>H</a> &middot; <?php _e('Topics', 'youare'); ?>: <?php the_category(', '); ?> &middot; <a href="#" onclick="javascript:print();" rel="nofollow" class="print" title="<?php _e('Print', 'youare'); ?>"><?php _e('Print', 'youare'); ?></a> </p>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="container content-background">
 	<div class="row">
-		<div id="content" class="col-md-8 col-xs-12 suffix_1">   
+		<div id="content" class="col-md-12 col-xs-12 suffix_1">   
 			<div class="single">
 				<?php 
 					if (have_posts()) {
@@ -42,7 +43,8 @@
 					} else {
 					}
 				?>
-		</div> <!--end single-->
+			</div> <!--end single-->
+		</div>
 	</div>
-<?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>
