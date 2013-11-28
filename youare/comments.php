@@ -45,13 +45,15 @@
 					endif; ?>
 					</div><!--end comments-->
 					<?php if ('open' == $post->comment_status) : ?>
+						<div class="well well-lg">
 						<div id="respond">
-							<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
+							<div class="col-sm-12"><p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
 							<h4 id="postcomment"><?php comment_form_title( __('Leave a Reply', 'youare'), __('Leave a Reply to %s', 'youare') ); ?></h4>
 							<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-								<p><?php echo sprintf(__('You must be <a href="%s/wp-login.php?redirect_to=%s">logged in</a> to post a comment.', 'youare'), get_option('siteurl'), urlencode(get_permalink())); ?></p>
+								<p class="alert alert-success"><?php echo sprintf(__('You must be <a href="%s/wp-login.php?redirect_to=%s">logged in</a> to post a comment.', 'youare'), get_option('siteurl'), urlencode(get_permalink())); ?></p>
 						</div><!--end respond-->
 							<?php else : ?>
+							</div>
 								<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" class="form-horizontal" role="form" method="post" id="commentform">
 									<?php if ( $user_ID ) :
 										echo sprintf(__('<p>Logged in as <a href="%s/wp-admin/profile.php">%s</a>. <a href="%s" title="Log out of this account">Log out &raquo;</a></p>', 'youare'), get_option('siteurl'), $user_identity, wp_logout_url(get_permalink()));
@@ -84,15 +86,18 @@
 											<span class="help-block"><?php _e('Note: XHTML is allowed.', 'youare'); ?></span>
 										</div>
 									</fieldset>
-									<?php do_action('comment_form', $post->ID); ?>
+									<div class="col-sm-12">
+										<?php do_action('comment_form', $post->ID); ?>
+									</div>
 									<fieldset class="form-group">
-										<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'youare'); ?>" />
+										<div class="col-sm-12"><input name="submit" type="submit" id="submit" class="btn btn-primary btn-lg" tabindex="5" value="<?php _e('Submit Comment', 'youare'); ?>" /></div>
 										<?php comment_id_fields(); ?>
 										<!--input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /-->
 									</fieldset>
 									<p class="comments-rss"><?php comments_rss_link(__('Subscribe to this comment feed via RSS', 'youare')); ?></p>
 								</form><!--end commentform-->
 						</div><!--end respond-->
+						</div>
 					<?php endif; // If registration required and not logged in ?>
 				<?php endif; // if you delete this the sky will fall on your head ?>
 			</div>

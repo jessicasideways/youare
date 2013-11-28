@@ -134,18 +134,9 @@ border-bottom: 4px double #ddd;
 input[type=text], textarea {
 	background-color: #fff;
     border: 1px solid #ddd;
-	}
-textarea:focus { background: #fff; }
-
-#content input[type=submit] {
-	background: #8a0;
-	color: #fff;
-  }
-
-#content #search_form { background: #f5f6f1;
 }
-#search_form input[type=submit] { background: #a50; border: 1px solid #a50; color: #fff; 
-}
+textarea:focus { background: #ffffff; }
+#content #search_form { background: #f5f6f1; }
 
 /*System
 ---------------------------------------*/

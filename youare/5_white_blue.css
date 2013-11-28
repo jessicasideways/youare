@@ -77,21 +77,11 @@ border-bottom: 4px double #c8d4d6;
 
 /*Forms
 ---------------------------------------------------------*/
-input.search { 
-background: #ffffff url(images/icons/search_16.png) 6px 6px no-repeat;
-}
 input[type=text], textarea {
 	background-color: #ffffff;
     border: 1px solid #d8dfc3;
 }
 textarea:focus { background: #ffffff; }
-
-#content input[type=submit] {
-	background: #88aa00;
-	color: #ffffff;
-}
-#content #search_form { background: #f5f5f5; }
-#search_form input[type=submit] { background: #00648c; border: 1px solid #00648c; color: #ffffff; }
 
 /*System
 ---------------------------------------*/

@@ -82,18 +82,7 @@ border-bottom: 4px double #dcdcd4;
 
 /*Forms
 ---------------------------------------------------------*/
-input.search { 
-background: #ffffff url(images/icons/search_16.png) 6px 6px no-repeat;
-}
-
-#content input[type=submit] {
-	background: #88aa00;
-	color: #ffffff;
-}
-
 #content #search_form { background: #e7ebdc; }
-#search_form input[type=submit] { background: #405d6b; border: 1px solid #405d6b; color: #ffffff; 
-}
 
 /*System
 ---------------------------------------*/

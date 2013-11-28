@@ -90,21 +90,8 @@ blockquote.right, blockquote.left {
 
 /*Forms
 ---------------------------------------------------------*/
-input.search { 
-background: #fff url(images/icons/search_16.png) 6px 6px no-repeat;
-}
-
 textarea:focus { background: #fff; }
-
-#content input[type=submit] {
-	background: #8a0;
-	color: #fff;
-  }
-
-#content #search_form { background: #e7ebdc;
-}
-#search_form input[type=submit] { background: #a50; border: 1px solid #a50; color: #fff; 
-}
+#content #search_form { background: #e7ebdc; }
 
 /*System
 ---------------------------------------*/

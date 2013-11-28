@@ -134,20 +134,14 @@ border-bottom: 4px double #d8dfc3;
 /*Forms
 ---------------------------------------------------------*/
 input[type=text], textarea {
-	background-color: #fff;
+	background-color: #ffffff;
     border: 1px solid #d8dfc3;
 }
 textarea:focus {
-	background: #fff;
+	background: #ffffff;
 }
-
 #content #search_form {
 	background: #e7ebdc;
-}
-#search_form input[type=submit] {
-	background: #a50;
-	border: 1px solid #a50;
-	color: #fff; 
 }
 
 /*System

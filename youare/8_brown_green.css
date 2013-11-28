@@ -83,11 +83,7 @@ border-bottom: 4px double #deddd1;
 
 /*Forms
 ---------------------------------------------------------*/
-input.search { 
-	background: #fff url(images/icons/search_16.png) 6px 6px no-repeat;
-}
 #content #search_form { background: #f2f0e8; }
-#search_form input[type=submit] { background: #9e9f3b; border: 1px solid #9e9f3b; color: #ffffff; }
 
 /*System
 ---------------------------------------*/

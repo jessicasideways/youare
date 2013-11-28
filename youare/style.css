@@ -7,16 +7,17 @@ Author:			Jessica Sideways
 Author URI:		http://jessicasideways.com
 Tags: 			theme-options, fixed-width, two-columns, white, brown, green, right-sidebar, threaded-comments, microformats, translation-ready
 */
+html {
+  font-size: 14pt; }
+
 body {
-  font: 300 62.5%;
-  line-height: 1.8em; }
+  font-weight: 300;
+  line-height: 1.8em;
+  font-size: 1em;
+  padding-top: 70px; }
 
 p {
   margin-bottom: 1em; }
-
-.content-background {
-  font-size: 1.4em;
-  line-height: 1.8em; }
 
 .bold, #content p a, .bg_side a, .subscribe, #content li a {
   font-weight: bold; }
@@ -75,6 +76,9 @@ header a, .title a, #content #smart-archives-block li strong a {
 #content img {
   max-width: 100%; }
 
+nav a {
+  text-decoration: none; }
+
 header .vcard img {
   position: absolute;
   top: 18px; }
@@ -90,29 +94,6 @@ h1#logo a, div#logo a {
   width: 370px;
   margin-top: 0px; }
 
-#logo a, .nav, #content .title a, #sidebar h2, .date, .bg_side strong, #rss_links, .bypostauthor {
-  font-family: "Plantin", "Baskerville", palatino, georgia, times, serif; }
-
-.nav {
-  overflow: hidden;
-  margin-top: 37px;
-  float: right;
-  font-size: 1.3em;
-  line-height: 25px; }
-  .nav li {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block; }
-    .nav li.home {
-      border: none; }
-    .nav li a {
-      padding: 0 .5em; }
-
-.nav li, .subnav li {
-  display: inline;
-  margin-left: .5em;
-  padding-left: .5em; }
-
 #archives_page #nav_archives, .current_page_item, .current_page_parent, .current, .current-cat {
   font-weight: bold; }
 
@@ -126,7 +107,6 @@ h1#logo a, div#logo a {
 .splash {
   width: 100%;
   padding: 2%;
-  font-size: 1.3em;
   margin-bottom: 35px; }
   .splash .title, .splash h2, .splash h3 {
     font-size: 1.9em;
@@ -202,10 +182,6 @@ code {
 .intro {
   padding-bottom: 1em; }
 
-.intro, blockquote {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", helvetica, arial, sans-serif;
-  line-height: 1.7em; }
-
 .intro, blockquote.left, blockquote.right {
   font-size: 120%; }
 
@@ -226,24 +202,6 @@ blockquote {
   blockquote.left {
     float: left;
     margin: 10px 20px 20px 0; }
-
-h1, h2, h3, h4 {
-  font-weight: normal;
-  letter-spacing: 1px; }
-
-h2, #content h3, #content h4, #content h5, #content h6 {
-  margin: 2em 0 1em; }
-
-#content h3 {
-  font-size: 1.3em; }
-  #content h3.line-middle {
-    font-size: 1.5em; }
-
-#content h4, #content h5, #content h6 {
-  font-size: 1.2em; }
-
-#content h5, #content h6 {
-  font-size: 1em; }
 
 #content li {
   padding-bottom: 1em;
@@ -483,17 +441,23 @@ div.conversation {
   text-align: right; }
 
 h4#postcomment {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-weight: 400;
+  padding-bottom: 5px; }
 
 #commentform fieldset {
   display: block;
   border: none;
-  overflow: hidden;
-  margin-top: 1em;
-  padding-top: 1em; }
+  overflow: hidden; }
+  #commentform fieldset span {
+    font-size: 0.8em;
+    margin-top: -1px; }
 
 #content label, .wpcf7 p {
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  font-weight: 300; }
 
 .wpcf7 input, .wpcf7 textarea {
   margin: 0;
@@ -503,32 +467,12 @@ h4#postcomment {
   overflow: hidden; }
 
 .wpcf7 p, #content label {
-  padding: 4px 8px;
-  letter-spacing: 1px; }
+  font-size: 0.8em; }
 
 .wpcf7 br {
   display: none; }
 
-#content label {
-  float: left;
-  width: 150px; }
-
-input[type=text], textarea {
-  padding: 7px;
-  font: 100%/1.5em; }
-
-#content input[type=submit] {
-  padding: 20px 0;
-  width: 449px;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: bold;
-  border: none;
-  letter-spacing: 1px;
-  margin-left: 166px; }
-
 p.comments-rss {
-  margin: 35px 0;
   text-align: center; }
   p.comments-rss a {
     padding: 0 0 0 20px;
@@ -537,30 +481,6 @@ p.comments-rss {
 #content #search_form {
   margin-bottom: 35px;
   overflow: hidden; }
-
-input.search {
-  padding: 6px 6px 6px 25px;
-  font-size: 110%;
-  float: left;
-  vertical-align: middle;
-  margin-right: 5px;
-  width: 470px; }
-
-#sidebar #search_form {
-  margin-top: 25px; }
-
-#sidebar input.search {
-  width: 160px; }
-
-#search_form input[type=submit] {
-  padding: 5px;
-  font-size: 100%; }
-
-#content #search_form {
-  padding: 15px; }
-  #content #search_form input[type=submit] {
-    width: 80px;
-    margin: 0; }
 
 p.note {
   font-family: palatino, georgia, times, serif;

@@ -75,28 +75,14 @@ border-bottom: 4px double #dddddd;
 
 /*Comments
 ------------------------------------------------------------ */
-.conversation .head .author img{ border:4px solid #dddddd;
-}
+.conversation .head .author img{ border:4px solid #dddddd; }
 .conversation .foot a{ color:#222222; background:#cccccc; }
-
 .bypostauthor {color: #373F3D; }
 
 /*Forms
 ---------------------------------------------------------*/
-input.search { 
-background: #ffffff url(images/icons/search_16.png) 6px 6px no-repeat;
-}
 textarea:focus { background: #ffffff; }
-
-#content input[type=submit] {
-	background: #88aa00;
-	color: #ffffff;
-  }
-
 #content #search_form { background: #f5f6f1; }
-#search_form input[type=submit] { background: #aa5500; border: 1px solid #aa5500; color: #ffffff; 
-}
-
 
 /*System
 ---------------------------------------*/
