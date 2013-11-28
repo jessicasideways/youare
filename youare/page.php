@@ -56,10 +56,7 @@
 					edit_post_link(__('Edit This', 'youare'),'<p>','</p>');
 					wp_link_pages();
 				} /* rewind or continue if all posts have been fetched */
-				comments_template('', true);
-			} else {
 			}
-			
 			?>
 			</div><!--end single-->
 		</div>

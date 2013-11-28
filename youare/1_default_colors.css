@@ -133,44 +133,36 @@ border-bottom: 4px double #d8dfc3;
 
 /*Forms
 ---------------------------------------------------------*/
-input.search { 
-background: #fff url(images/icons/search_16.png) 6px 6px no-repeat;
-}
-#content label, .wpcf7 p {
-	background: #e7ebdc; color: #456030
-	}
-#commentform fieldset {border-top: 1px solid #e7ebdc; }
-
-
 input[type=text], textarea {
 	background-color: #fff;
     border: 1px solid #d8dfc3;
-	}
-textarea:focus { background: #fff; }
-
-#content input[type=submit] {
-	background: #8a0;
-	color: #fff;
-  }
-
-#content #search_form { background: #e7ebdc
 }
-#search_form input[type=submit] { background: #a50; border: 1px solid #a50; color: #fff; 
+textarea:focus {
+	background: #fff;
+}
+
+#content #search_form {
+	background: #e7ebdc;
+}
+#search_form input[type=submit] {
+	background: #a50;
+	border: 1px solid #a50;
+	color: #fff; 
 }
 
 /*System
 ---------------------------------------*/
 .alert, .info, .success {
 	padding: 10px 30px;
-	overflow: hidden
+	overflow: hidden;
 }
 
 /*Sidebar
 ------------------------------------------------------------ */
 
-#sidebar h2 {border-bottom: 2px solid #d8dfbc
+#sidebar h2 {border-bottom: 2px solid #d8dfbc;
 }
-#photo_author img { border: 8px solid #efeed8 }
+#photo_author img { border: 8px solid #efeed8; }
 
 
 /* --- Numeric Pagination -------------- */
@@ -185,7 +177,7 @@ textarea:focus { background: #fff; }
 
 .wp-pagenavi a:visited {
 background: #f4f4f4;
-border-color: #bbb
+border-color: #bbb;
 }
 .wp-pagenavi a:hover {	
 	background-color: #eee;

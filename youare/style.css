@@ -515,8 +515,7 @@ h4#postcomment {
 
 input[type=text], textarea {
   padding: 7px;
-  font: 100%/1.5em;
-  width: 435px; }
+  font: 100%/1.5em; }
 
 #content input[type=submit] {
   padding: 20px 0;
@@ -527,9 +526,6 @@ input[type=text], textarea {
   border: none;
   letter-spacing: 1px;
   margin-left: 166px; }
-
-#content .wpcf7 input[type=submit] {
-  width: 453px; }
 
 p.comments-rss {
   margin: 35px 0;
@@ -569,10 +565,6 @@ input.search {
 p.note {
   font-family: palatino, georgia, times, serif;
   text-align: center; }
-
-#content .wpcf7 input, .wpcf7 textarea {
-  width: 437px;
-  margin: 0; }
 
 .twitter {
   background: url(images/icons/twitter_favicon.png) no-repeat 0 0;

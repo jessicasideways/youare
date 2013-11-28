@@ -131,15 +131,6 @@ border-bottom: 4px double #ddd;
 
 /*Forms
 ---------------------------------------------------------*/
-input.search { 
-background: #fff url(images/icons/search_16.png) 6px 6px no-repeat;
-}
-#content label, .wpcf7 p {
-	background: #f5f6f1; color: #456030
-	}
-#commentform fieldset {border-top: 1px solid #f5f6f1; }
-
-
 input[type=text], textarea {
 	background-color: #fff;
     border: 1px solid #ddd;
@@ -151,7 +142,7 @@ textarea:focus { background: #fff; }
 	color: #fff;
   }
 
-#content #search_form { background: #f5f6f1
+#content #search_form { background: #f5f6f1;
 }
 #search_form input[type=submit] { background: #a50; border: 1px solid #a50; color: #fff; 
 }

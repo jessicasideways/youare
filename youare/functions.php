@@ -55,16 +55,22 @@ function youare_posted_on() {
 
 // Meta description and keywords
 function csv_tags() {
-	$list = get_the_tags();
-	if ($list) {
-		foreach($list as $tag) {
-			$csv_tags[] = $tag->name;
+	$csv_tags = array();
+	$list = array();
+	if (get_the_tags()) {
+		$list = get_the_tags();
+		if (!empty($list)) {
+			foreach($list as $tag) {
+				$csv_tags[] = $tag->name;
+			}
 		}
 	}
-	foreach((get_the_category()) as $tag) {
-		$csv_tags[] = $tag->cat_name;
+	foreach((get_the_category()) as $cat) {
+		$csv_tags[] = $cat->cat_name;
 	}
-	echo '<meta name="keywords" content="'.implode(',',$csv_tags).'" />';
+	if (count($list) > 0) {
+		echo '<meta name="keywords" content="'.implode(',',$csv_tags).'" />';
+	}
 }
 
 // Widgets Sidebar
