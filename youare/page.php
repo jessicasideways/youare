@@ -45,7 +45,7 @@
 </div>
 <div class="container content-background">
 	<div class="row">
-		<div id="content" class="col-md-8 col-xs-12">
+		<div id="content" class="col-md-12 col-xs-12">
 			<?php
 				while (have_posts()) {
 					the_post();

@@ -207,17 +207,6 @@ blockquote {
 }
 
 //Post Lists
-#content li {
-	padding-bottom: 1em;
-	margin-left: 2em;
-}
-
-.entry li, .single li {
-	clear: both;
-}
-#content ul li {
-	list-style: circle;
-}
 .meta {
 	text-transform: uppercase;
 	& span {
