@@ -2,6 +2,9 @@ The You Are Theme
 =================
 The You Are Theme is a very personal, minimalistic theme for WordPress. It is currently compatible with WordPress 2.8, but efforts are underway to modernise the theme, making it easier to use, maintain and customise. It is based off of the YouAre theme created by the former social network, YouAre.com.
 
+# This project has been temporarily suspended.
+Please read [this post](http://notmypony.com/2013/12/theme-officially-suspended/) for more information on this project, the suspension and the future of the project.
+
 Frequently Asked Questions
 --------------------------
 ### What license will the You Are Theme be issued under?
