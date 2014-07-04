@@ -17,7 +17,7 @@
 						$next_title = strip_tags(str_replace('"', '', $next_post->post_title));
 						echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="next">'.__('Next &raquo;', 'youare').'</a>' . "\n";
 					}
-				?></span> <?php edit_post_link(__('Edit This', 'youare'),'<strong>','</strong>'); ?> Posted on <?php youare_posted_date(); ?> at <a href="<?php echo get_permalink(); ?>" rel="bookmark" title="Permanent Link"><?php the_time('G:i'); ?>H</a> &middot; <?php _e('Topics', 'youare'); ?>: <?php the_category(', '); ?> &middot; <a href="#" onclick="javascript:print();" rel="nofollow" class="print" title="<?php _e('Print', 'youare'); ?>"><?php _e('Print', 'youare'); ?></a> </p>
+				?></span> <?php edit_post_link(__('Edit This', 'youare'),'<strong>','</strong>'); ?> <?php echo _e('Posted on', 'youare'); echo " "; youare_posted_date(); ?> at <a href="<?php echo get_permalink(); ?>" rel="bookmark" title="<?php _e('Permanent Link','youare'); ?>"><?php the_time('G:i'); ?>H</a> &middot; <?php _e('Topics', 'youare'); ?>: <?php the_category(', '); ?> &middot; <a href="#" onclick="javascript:print();" rel="nofollow" class="print" title="<?php _e('Print', 'youare'); ?>"><?php _e('Print', 'youare'); ?></a> </p>
 			</div>
 		</div>
 	</div>

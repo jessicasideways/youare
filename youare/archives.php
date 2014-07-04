@@ -22,7 +22,7 @@ Template Name: Archives
 </div> <!--end splash-->  
 <div class="container content-background">
 	<div class="row">
-		<div id="content" class="col-md-8 col-xs-12 suffix_1">   
+		<div id="content" class="col-md-8 col-xs-12">   
 			<div class="single">
 				<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 				<?php smart_archives(); ?>

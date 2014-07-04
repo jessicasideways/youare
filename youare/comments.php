@@ -17,7 +17,7 @@
 				<?php if ( have_comments() ) : ?>
 					<div class="comment-number">
 						<h3 class="line-middle"><span><?php comments_number(__('No Comments Yet', 'youare'), __('1 Comment', 'youare'), __('% Comments', 'youare') );?> &rarr;
-							<a id="leavecomment" href="#respond" title="<?php _e("Leave One", 'youare'); ?>"> <?php _e('Leave a Reply', 'youare'); ?></a></span></h3> <?php if ('open' == $post-> ping_status) { ?><p><a href="<?php trackback_url() ?>" title="Trackback URL">Trackback URL</a></p><?php } ?>
+							<a id="leavecomment" href="#respond" title="<?php _e("Leave One", 'youare'); ?>"> <?php _e('Leave a Reply', 'youare'); ?></a></span></h3> <?php if ('open' == $post-> ping_status) { ?><p><a href="<?php trackback_url() ?>" title="<?php _e('Trackback URL','youare'); ?>"><?php _e('Trackback URL','youare'); ?></a></p><?php } ?>
 					</div><!--end comment-number-->
 					<ol class="commentlist">
 						<?php wp_list_comments('type=comment&callback=custom_comment'); ?>

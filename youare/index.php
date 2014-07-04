@@ -43,7 +43,7 @@
 <?php 
 				} /* rewind or continue if all posts have been fetched */
 ?>
-			<div class="pright">
+			<div class="align-right">
 				<?php wp_pagenavi(); ?>
 			</div>
 <?php 

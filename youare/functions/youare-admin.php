@@ -1,32 +1,5 @@
 <?php
 
-if (get_option('twitter_username') && !get_option('Y_twitter')) update_option('Y_twitter', 'http://twitter.com/'.get_option('twitter_username'));
-
-$themename = "You Are";
-$shortname = "Y";
-$theme_current_version = "0.1";
-$theme_url = "http://jessicasideways.github.io/youare/";
-
-// Stylesheet Auto Detect
-$alt_stylesheet_path = TEMPLATEPATH;
-
-$alt_stylesheets     = array();
-
-if(is_dir($alt_stylesheet_path))
-{
-    if($alt_stylesheet_dir = opendir($alt_stylesheet_path))
-    {
-        while(($alt_stylesheet_file = readdir($alt_stylesheet_dir)) !== false)
-        {
-            if(stristr($alt_stylesheet_file, '.css') !== false && $alt_stylesheet_file != 'style.css')
-            {
-                $alt_stylesheets[] = $alt_stylesheet_file;
-            }
-        }
-    }
-}
-
-asort($alt_stylesheets);
 array_unshift($alt_stylesheets, 'Select a stylesheet:');
 
 $options = array (
@@ -38,19 +11,6 @@ $options = array (
 			"std" => "Select a stylesheet:",
 			"type" => "select",
 			"options" => $alt_stylesheets),
-	//HEADER NAVIGATION EXCLUDE PAGES
-	array(	"name" => "Header Navigation", "type" => "subhead"),
-	array(  "name" => "Exclude pages",
-			"id" => $shortname."_pages_to_exclude",
-			"desc" => "Page IDs you don't want displayed in your header navigation. Use a comma-delimited list, eg. 1, 7, 1386",
-			"std" => "",
-			"type" => "text"),
-	array(	"name" => "Page Ids", "type" => "cats_ids"),
-	array(	"name" => "Hide all pages",
-			"id" => $shortname."_hide_pages",
-			"desc" => "Check this box to hide all pages in header navigation.",
-			"std" => "false",
-			"type" => "checkbox"),
 
 	//AUTHOR BOX
 	array(	"name" => "Author Box Sidebar",
@@ -61,16 +21,6 @@ $options = array (
 			"type" => "textarea",
 			"options" => array("rows" => "2",
 			"cols" => "80") ),
-
-	//PHOTO ABOUT PAGE (Sidebar)
-	array(	"name" => "Your photo in the default 'About Page' (Sidebar) = Page ID: 2 ",
-			"type" => "subhead"),
-	array(  "name" => "Photo URL",
-			"id" => $shortname."_photo_url_about",
-			"desc" => "eg: http://domain.com/photo.jpg. Image will be resized to 244x244 pixels. <br />Tip: Place your image in the <code>/wp-content/themes/youare/images/sidebar</code> subdirectory and paste the URL Photo <br /> Tip: <a href=\"http://wptheme.youare.com/demo/2009/08/22/how-to-customize-your-about-page/\">How to customize your 'About Page'</a> ",
-			"std" => "",
-			"type" => "text",
-			"style" => "width: 425px"), 
 
 	//SOCIAL PROFILES. FOLLOW LINKS
 	array(	"name" => "Online identity",
@@ -170,43 +120,6 @@ $options = array (
 			"desc" => "Alt tag for the second ad",
 			"std" => "",
 			"type" => "text"),
-
-	//FOOTER PROMOTE YOUR COMPANY
-	array(	"name" => "Footer Promo",
-			"type" => "subhead"),
-	array(	"name" => "Promote your company",
-			"id" => $shortname."_promo_footer",
-			"desc" => "I want to promote my company services in Footer.",
-			"std" => "false",
-			"type" => "checkbox"),
-	array(	"name" => "Company tag line or Featured work",
-			"id" => $shortname."_footer_tagline",
-			"desc" => "",
-			"type" => "text",
-			"style" => "width: 677px",
-			"row_style" => "background-color: #f1f1f1;"),
-	array(	"name" => "Company services",
-			"id" => $shortname."_footer_content",
-			"desc" => "XHTML required to look gorgeous, eg: &lt;p&gt;Company services in one line&lt;/p&gt; <a href=\"http://wptheme.youare.com/demo/2009/08/19/how-to-customize-footer/\">How to customize footer</a>",
-			"std" => "",
-			"type" => "textarea",
-			"options" => array("rows" => "3",
-			"cols" => "80") ),
-
-	//FOOTER CREDITS AND STATS CODE
-	array(	"name" => "Footer Credits / Stats Code",
-			"type" => "subhead"),
-	array(	"name" => "Copyright (Your name)",
-			"id" => $shortname."_copyright_name",
-			"std" => "Your Name Here",
-			"type" => "text"),
-	array(	"name" => "Stats code",
-			"id" => $shortname."_stats_code",
-			"desc" => "Paste your Google Analytics (or other) tracking code here",
-			"std" => "",
-			"type" => "textarea",
-			"options" => array(	"rows" => "4",
-								"cols" => "80") ),
 );
 
 function mytheme_add_admin() {

@@ -32,7 +32,7 @@
 			<div class="container splash">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="title">Search Results for "<?php the_search_query(); ?>"</h1>
+						<h1 class="title"><?php echo sprintf(__('Search Results for "%s"', 'youare'), get_search_query()); ?></h1>
 					</div>
 				</div>
 			</div> <!--end splash-->  

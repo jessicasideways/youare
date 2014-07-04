@@ -4,7 +4,7 @@
 	?>
 	<div id="photo_author">
 		<!-- Go to You Are Options in WordPress Dashboard to paste a URL Photo in your About Page -->
-		<img src="<?php $photo = get_option('Y_photo_url_about'); echo $photo?$photo: bloginfo('template_url').'/images/sidebar/photo_default_about.jpg' ?>" alt="Photo" />
+		<img src="<?php $photo = get_option('Y_photo_url_about'); echo $photo?$photo: bloginfo('template_url').'/images/sidebar/photo_default_about.jpg' ?>" alt="<?php _e('Photo','youare'); ?>" />
 		<?php include (TEMPLATEPATH . '/follow_links.php'); ?>
 	</div>
 	<?php
@@ -119,7 +119,7 @@
 		$flickr_off = get_option('Y_flickr_off');
 		if ($flickr_off && ($flickr = get_option('Y_flickr'))) {
 ?>
-      <h2>Flickr</h2><div id="flickr_container">
+      <h2><?php _e('Flickr','youare'); ?></h2><div id="flickr_container">
 <?php
 			$url = 'http://www.flickr.com/photos/'.$flickr;
 			$html = file_get_contents($url);

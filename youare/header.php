@@ -29,7 +29,7 @@
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
+					<span class="sr-only"><?php _e('Toggle navigation','youare'); ?></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -40,23 +40,22 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<?php 
-						$exclude_pages = get_option('Y_pages_to_exclude');
-						$hide_pages = get_option('Y_hide_pages');
-						if ($hide_pages != 'true') {
-					?>
-						<li<?php if ( is_page('archivos') || is_archive()) { echo ' class="active"'; } ?>><a href="<?php bloginfo('url'); ?>/<?php _e('archives', 'youare'); ?>" accesskey="2" title="<?php _e('Archives', 'youare'); ?> (Alt+2)"><?php _e('Archives', 'youare'); ?></a></li>
 					<?php
-						$my_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".__('Archives', 'youare')."'");
-						wp_list_pages('depth=-1&title_li=&exclude='. $exclude_pages.','.$my_id);
-					}
+
+					$args = array(
+						'menu' => 'main-menu',
+						'echo' => false,
+						'before' => '<li class="menu-item">',
+						'after' => '</li>',
+					);
+					echo strip_tags(wp_nav_menu( $args ), '<li><a>');
 					?>
 				</ul>
 				<form class="navbar-form navbar-left" role="search">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
+						<input type="text" class="form-control" placeholder="<?php _e('Search','youare'); ?>">
 					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-default"><?php _e('Submit','youare'); ?></button>
 				</form>
 			</div><!-- /.navbar-collapse -->
 		</nav>

@@ -8,7 +8,7 @@ Template Name: About
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="bigpage title">About</h1>
+				<h1 class="bigpage title"><?php _e('About', 'youare'); ?></h1>
 				<p></p>
 			</div>
 		</div>

@@ -2,7 +2,197 @@
 define ('FUNCTIONS', TEMPLATEPATH . '/functions');
 define ('COPY', FUNCTIONS . '/youare.php');
 require_once (FUNCTIONS . '/comments.php');
+if (get_option('twitter_username') && !get_option('Y_twitter')) update_option('Y_twitter', 'http://twitter.com/'.get_option('twitter_username'));
+$themename = "You Are";
+$shortname = "Y";
+$theme_current_version = "0.1";
+$theme_url = "http://jessicasideways.github.io/youare/";
+
+// Stylesheet Auto Detect
+$alt_stylesheet_path = TEMPLATEPATH;
+
+$alt_stylesheets     = array();
+
+if(is_dir($alt_stylesheet_path))
+{
+    if($alt_stylesheet_dir = opendir($alt_stylesheet_path))
+    {
+        while(($alt_stylesheet_file = readdir($alt_stylesheet_dir)) !== false)
+        {
+            if(stristr($alt_stylesheet_file, '.css') !== false && $alt_stylesheet_file != 'style.css')
+            {
+                $alt_stylesheets[] = $alt_stylesheet_file;
+            }
+        }
+    }
+}
+
+asort($alt_stylesheets);
 require_once (FUNCTIONS . '/youare-admin.php');
+
+class YouAre_Customize {
+	// Theme Customizer
+	function register( $wp_customize ) {
+		//All our sections, settings, and controls will be added here
+		$wp_customize->add_section('youare_altstyle', array(
+			'title'	  => __('Alternate Styles','youare'),
+			'prority' => 10
+		));
+		$wp_customize->add_setting('youare_altstyle_css',array(
+			'default' => ''
+		));
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'youare_altstyle_css', array(
+			'label'		=>	__('Alternate Theme Stylesheet','youare'),
+			'section'	=>	'youare_altstyle',
+			'settings'	=>	'youare_altstyle_css',
+			'priority'	=>	1,
+			'type'		=>	'select',
+			'choices'	=>	$alt_stylesheets
+		)));
+		$wp_customize->add_section('youare_author', array(
+			'title'	  => __('Author Information','youare'),
+			'prority' => 20
+		));
+		$wp_customize->add_setting('youare_author_blurb',array(
+			'default' => ''
+		));
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'youare_author_blurb', array(
+			'label'		=>	__('Author Blurb','youare'),
+			'section'	=>	'youare_author',
+			'settings'	=>	'youare_author_blurb',
+			'priority'	=>	1
+		)));
+		$wp_customize->add_setting('youare_author_photo',array(
+			'default' => get_template_directory_uri() . '/img/portrait.gif'
+		));
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'youare_author_photo', array(
+			'label'		=>	__('Author Photo', 'youare'),
+			'section'	=>	'youare_author',
+			'settings'	=>	'youare_author_photo',
+			'priority'	=>	2
+		)));
+		$wp_customize->add_section('youare_identity', array(
+			'title'	  => __('Online Identity','youare'),
+			'prority' => 30
+		));
+		$wp_customize->add_section('youare_rss', array(
+			'title'	   => __('RSS Service Options'),
+			'priority' => 40
+		));
+		$wp_customize->add_setting('youare_rss_service', array(
+			'default'	=>	''
+		));
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'youare_rss_service', array(
+			'label'		=>	__('Are you using an external RSS Service?','youare'),
+			'section'	=>	'youare_rss',
+			'settings'	=>	'youare_rss_service',
+			'type'		=>	'select',
+			'priority'	=>	1,
+			'choices'	=>	array(
+				'noservice'		=>	__('No Service'),
+				'feedblitz'		=>	__('FeedBlitz'),
+				'feedburner'	=>	__('FeedBurner')
+			)
+		)));
+		$wp_customize->add_section('youare_ads', array(
+			'title'	  => __('Sidebar Ads','youare'),
+			'prority' => 50
+		));
+	
+		$wp_customize->add_section('youare_footer', array(
+			'title'	  => __('Footer Promo','youare'),
+			'prority' => 60
+		));
+		$wp_customize->add_setting('youare_footer_promoon',array(
+			'default' => ''
+		));
+		$wp_customize->add_control(
+		    new WP_Customize_Control(
+		        $wp_customize,
+		        'youare_footer_promoon',
+		        array(
+		            'label'          => __( 'Promote your company?', 'youare' ),
+		            'section'        => 'youare_footer',
+		            'settings'       => 'youare_footer_promoon',
+					'priority'		 => 1
+		        )
+		    )
+		);
+		$wp_customize->add_setting('youare_footer_tagline',array(
+			'default' => ''
+		));
+		$wp_customize->add_control(
+		    new WP_Customize_Control(
+		        $wp_customize,
+		        'youare_footer_tagline',
+		        array(
+		            'label'          => __( 'Company tag line or featured work', 'youare' ),
+		            'section'        => 'youare_footer',
+		            'settings'       => 'youare_footer_tagline',
+					'priority'		 => 2
+		        )
+		    )
+		);
+		$wp_customize->add_setting('youare_footer_content',array(
+			'default' => ''
+		));
+		$wp_customize->add_control(
+		    new WP_Customize_Control(
+		        $wp_customize,
+		        'youare_footer_content',
+		        array(
+		            'label'          => __( 'Company tag line or featured work', 'youare' ),
+		            'section'        => 'youare_footer',
+		            'settings'       => 'youare_footer_content',
+					'priority'		 => 3
+		        )
+		    )
+		);
+		$wp_customize->add_section('youare_credits', array(
+			'title'	  => __('Footer Credits &amp; Stats Code','youare'),
+			'prority' => 70
+		));
+		$wp_customize->add_setting('youare_credits_copyright',array(
+			'default' => ''
+		));
+		$wp_customize->add_control(
+		    new WP_Customize_Control(
+		        $wp_customize,
+		        'youare_credits_copyright',
+		        array(
+		            'label'          => __( 'Copyright (your name)', 'youare' ),
+		            'section'        => 'youare_credits',
+		            'settings'       => 'youare_credits_copyright'
+		        )
+		    )
+		);
+		$wp_customize->add_setting('youare_credits_statscode',array(
+			'default' => ''
+		));
+	}
+	public static function header_output() { 
+		// Customizer CSS 
+	    echo '<style type="text/css">';
+		self::generate_css('#site-title a', 'color', 'header_textcolor', '#');
+		self::generate_css('body', 'background-color', 'background_color', '#');
+		self::generate_css('a', 'color', 'link_textcolor');
+		echo '</style>'; 
+	}
+	
+	public static function live_preview()
+	{
+		wp_enqueue_script( 
+			  'youare-themecustomizer',
+			  get_template_directory_uri().'/js/theme-customizer.min.js',
+			  array( 'jquery','customize-preview' ),
+			  '0.1',
+			  true						//Put script in footer?
+		);
+	}
+}
+add_action( 'wp_head' , array( 'YouAre_Customize' , 'header_output' ) );
+add_action( 'customize_preview_init', array('YouAre_Customize','live_preview') );
+add_action( 'customize_register', array('YouAre_Customize','register') );
 
 // Load theme CSS & JavaScript
 

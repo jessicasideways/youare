@@ -47,7 +47,7 @@
 		} elseif( is_tag() ) {
 ?>
 <p class="pright previous"><a class="rss" title="<?php _e('Subscribe to this tag', 'youare'); ?>" href="<?php echo get_category_feed_link('cat_id','feed'); ?>feed/"><?php echo sprintf(__('Subscribe to %s', 'youare'), '<strong>'.single_tag_title(null, false).'</strong>'); ?></a></p>
-<h1 class="title">Tags: <?php single_tag_title(); ?></h1>
+<h1 class="title"><?php echo sprintf(__('Tags: %s','youare'), single_tag_title('', false)); ?></h1>
 <?php youare_archive_x_posts(); ?>
 <p><em class="twitter">#<a href="http://twitter.com/#search?q=<?php single_tag_title(); ?>"><?php single_tag_title(); ?></a></em></p>
 <?php
